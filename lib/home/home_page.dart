@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:kartbahn_app/home/widgets/black_button.dart';
+import 'package:kartbahn_app/screens/login_1.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -18,11 +19,43 @@ class _HomePageState extends State<HomePage> {
         bottomNavigationBar: BottomNavigationBar(
           selectedItemColor: Colors.black,
           unselectedItemColor: const Color.fromARGB(255, 255, 255, 255),
-          showSelectedLabels: false,
-          showUnselectedLabels: false,
+          showSelectedLabels: true,
+          showUnselectedLabels: true,
+          onTap: (index) {
+            if (index == 0) {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Login_1()),
+              );
+            }
+            if (index == 1) {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Login_1()),
+              );
+            }
+            if (index == 2) {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Login_1()),
+              );
+            }
+            if (index == 3) {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Login_1()),
+              );
+            }
+            if (index == 4) {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Login_1()),
+              );
+            }
+          },
           items: const [
             BottomNavigationBarItem(
-              backgroundColor: Color.fromARGB(255, 214, 88, 88),
+              backgroundColor: Color.fromARGB(255, 189, 52, 52),
               icon: Icon(CupertinoIcons.home),
               label: 'Home',
             ),
@@ -40,7 +73,7 @@ class _HomePageState extends State<HomePage> {
             ),
             BottomNavigationBarItem(
               icon: Icon(CupertinoIcons.person),
-              label: 'personal',
+              label: 'login',
             ),
           ],
         ),

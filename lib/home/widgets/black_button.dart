@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class BlackButton extends StatelessWidget {
-  const BlackButton({required this.buttonText,super.key});
+  const BlackButton({required this.buttonText, super.key});
   final String buttonText;
   @override
   Widget build(BuildContext context) {
@@ -10,12 +10,12 @@ class BlackButton extends StatelessWidget {
       style: ButtonStyle(
         textStyle: MaterialStateProperty.all(
           const TextStyle(
-              fontSize: 35,
+              fontSize: 30,
               fontWeight: FontWeight.bold,
               color: Color.fromARGB(255, 255, 255, 255)),
         ),
         surfaceTintColor: MaterialStateProperty.all(
-          const Color.fromARGB(255, 214, 88, 88),
+          const Color.fromARGB(255, 255, 255, 255),
         ),
         elevation: MaterialStateProperty.all(15),
         foregroundColor:
@@ -29,7 +29,7 @@ class BlackButton extends StatelessWidget {
           ),
         ),
       ),
-      child: Text("$buttonText"),
+      child: Text(buttonText),
     );
   }
 }

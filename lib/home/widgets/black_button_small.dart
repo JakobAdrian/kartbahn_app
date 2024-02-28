@@ -10,7 +10,7 @@ class BlackButtonSmall extends StatelessWidget {
       style: ButtonStyle(
         textStyle: MaterialStateProperty.all(
           const TextStyle(
-              fontSize: 35,
+              fontSize: 15,
               fontWeight: FontWeight.bold,
               color: Color.fromARGB(255, 255, 255, 255)),
         ),
@@ -25,11 +25,11 @@ class BlackButtonSmall extends StatelessWidget {
         fixedSize: MaterialStateProperty.all(const Size(180, 60)),
         shape: MaterialStateProperty.all(
           RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(6),
+            borderRadius: BorderRadius.circular(12),
           ),
         ),
       ),
-      child: Text("$buttonText"),
+      child: Text(buttonText),
     );
   }
 }
