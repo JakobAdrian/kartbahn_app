@@ -5,7 +5,7 @@ import 'package:kartbahn_app/home/widgets/facebook.dart';
 import 'package:kartbahn_app/home/widgets/google_button.dart';
 
 class Login_1 extends StatelessWidget {
-  Login_1({super.key});
+  const Login_1({super.key});
 
   void signUserIn() {}
 
