@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:kartbahn_app/home/home_page.dart';
 import 'package:kartbahn_app/home/widgets/apple_button.dart';
 import 'package:kartbahn_app/home/widgets/black_button_small.dart';
 import 'package:kartbahn_app/home/widgets/facebook.dart';
 import 'package:kartbahn_app/home/widgets/google_button.dart';
 
-class Login_1 extends StatelessWidget {
-  const Login_1({super.key});
-
-  void signUserIn() {}
+class Login extends StatelessWidget {
+  Login({super.key});
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -20,20 +21,31 @@ class Login_1 extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Image.asset("assets/images/kartbahnwerther_logo.png",
-                    height: 250),
-                Text(
-                  "Einloggen",
-                  style: TextStyle(
-                    color: Colors.grey[900],
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
+                Image.asset(
+                  "assets/images/kartbahnwerther_logo.png",
+                  height: 250,
+                  gaplessPlayback: true,
+                ),
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  child: Row(
+                    children: [
+                      Text(
+                        "Einloggen",
+                        style: TextStyle(
+                          color: Colors.grey[900],
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
                 const SizedBox(height: 20),
                 SizedBox(
                   width: 350,
                   child: TextField(
+                    controller: emailController,
                     obscureText: false,
                     decoration: InputDecoration(
                       hintText: "Handynummer oder Email",
@@ -48,6 +60,7 @@ class Login_1 extends StatelessWidget {
                 SizedBox(
                   width: 350,
                   child: TextField(
+                    controller: passwordController,
                     obscureText: true,
                     decoration: InputDecoration(
                       hintText: "Passwort",
@@ -75,7 +88,16 @@ class Login_1 extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 15),
-                const BlackButtonSmall(buttonText: "einloggen"),
+                BlackButtonSmall(
+                  buttonText: "einloggen",
+                  buttonFunction: () {
+                    Navigator.pop(
+                      //hier kommt dann noch die Login-Logik hin
+                      context,
+                      MaterialPageRoute(builder: (context) => const HomePage()),
+                    );
+                  },
+                ),
                 const SizedBox(height: 30),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -106,7 +128,7 @@ class Login_1 extends StatelessWidget {
                 const SizedBox(height: 25),
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children:  [
+                  children: [
                     GoogleButton(),
                     AppleButton(),
                     FacebookButton(),

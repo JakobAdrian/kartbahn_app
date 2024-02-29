@@ -1,7 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:kartbahn_app/home/widgets/black_button.dart';
-import 'package:kartbahn_app/screens/login_1.dart';
+import 'package:kartbahn_app/screens/coupon.dart';
+import 'package:kartbahn_app/screens/info.dart';
+import 'package:kartbahn_app/screens/login.dart';
+import 'package:kartbahn_app/screens/request.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -25,31 +28,31 @@ class _HomePageState extends State<HomePage> {
             if (index == 0) {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Login_1()),
+                MaterialPageRoute(builder: (context) => const HomePage()),
               );
             }
             if (index == 1) {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Login_1()),
+                MaterialPageRoute(builder: (context) => const  Information()),
               );
             }
             if (index == 2) {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Login_1()),
+                MaterialPageRoute(builder: (context) =>const   Coupon()),
               );
             }
             if (index == 3) {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Login_1()),
+                MaterialPageRoute(builder: (context) =>  const Request()),
               );
             }
             if (index == 4) {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Login_1()),
+                MaterialPageRoute(builder: (context) =>  Login()),
               );
             }
           },
@@ -57,11 +60,11 @@ class _HomePageState extends State<HomePage> {
             BottomNavigationBarItem(
               backgroundColor: Color.fromARGB(255, 189, 52, 52),
               icon: Icon(CupertinoIcons.home),
-              label: 'Home',
+              label: 'home',
             ),
             BottomNavigationBarItem(
               icon: Icon(CupertinoIcons.info),
-              label: 'Cart',
+              label: 'info',
             ),
             BottomNavigationBarItem(
               icon: Icon(CupertinoIcons.doc_plaintext),

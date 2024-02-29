@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
 class BlackButtonSmall extends StatelessWidget {
-  const BlackButtonSmall({required this.buttonText, super.key});
+   BlackButtonSmall({required this.buttonFunction, required this.buttonText, super.key});
   final String buttonText;
+  final Function buttonFunction ;
+
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: () {buttonFunction();},
       style: ButtonStyle(
         textStyle: MaterialStateProperty.all(
           const TextStyle(
