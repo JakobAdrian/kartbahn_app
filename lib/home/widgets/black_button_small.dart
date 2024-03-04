@@ -24,7 +24,7 @@ class BlackButtonSmall extends StatelessWidget {
             MaterialStateProperty.all(const Color.fromARGB(255, 255, 255, 255)),
         backgroundColor:
             MaterialStateProperty.all(const Color.fromARGB(255, 0, 0, 0)),
-        fixedSize: MaterialStateProperty.all(const Size(180, 60)),
+        fixedSize: MaterialStateProperty.all(const Size(160, 60)),
         shape: MaterialStateProperty.all(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),

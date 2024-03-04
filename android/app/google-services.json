@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "457195115837",
+    "project_id": "kartbahn-99951",
+    "storage_bucket": "kartbahn-99951.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:457195115837:android:9f45dc290e2d0580e1a154",
+        "android_client_info": {
+          "package_name": "com.example.kartbahn_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCurYv1XQqzG_Wnpr7zQ9FJy-RxAKiZSP4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
