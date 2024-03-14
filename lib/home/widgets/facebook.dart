@@ -21,9 +21,9 @@ class FacebookButton extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.all(4),
           decoration: BoxDecoration(
-            border: Border.all(color: Colors.white),
-            borderRadius: BorderRadius.circular(16),
-            color: const Color.fromARGB(255, 255, 255, 255),
+            border: Border.all(color:Theme.of(context).colorScheme.secondary, width: 2),
+            borderRadius: BorderRadius.circular(12),
+            color:Theme.of(context).colorScheme.secondary,
           ),
           child: Image.asset("assets/images/facebook.png"),
           height: 80,
